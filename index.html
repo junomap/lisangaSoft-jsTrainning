@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="tableau.js"></script>
+    <meta charset="UTF-8">
+    <title>TP 1 : Tableau</title>
+</head>
+
+<body>
+    <div ng-app="tableau" ng-controller="TableauController as Tableau">
+        <b>_______________________________</b><br><br>
+        
+        <b>Tableau 2:</b>
+        <br>
+        <br>
+        <div>
+            
+            <table border="1">
+                <tr ng-repeat="c in Tableau.continent">
+                    <td>{{c.cle+1}}</td>
+                    <td>{{c.pays}}</td>
+                    <td>{{c.ville}}</td>
+                    <td><button ng-click="Tableau.supprimer(c.cle)">supprimer</button></td>
+                </tr>
+                
+            </table><br>
+            
+        </div>
+    </div>
+</body>
+</html>
